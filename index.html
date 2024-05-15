@@ -2654,34 +2654,36 @@
 		});
 	</script>
 	<script>
-		var arCuMessages = [""];
-		var arCuLoop = false;
-		var arCuCloseLastMessage = false;
-		var arCuPromptClosed = false;
-		var _arCuTimeOut = null;
-		var arCuDelayFirst = 2000;
-		var arCuTypingTime = 2000;
-		var arCuMessageTime = 4000;
-		var arCuClosedCookie = 0;
-		var arcItems0 = [];
-		window.addEventListener('load', function () {
-			jQuery('#arcontactus0').on('arcontactus.openMenu', function () {
-				clearTimeout(_arCuTimeOut);
-				arCuPromptClosed = true;
-				jQuery('#contact').contactUs0('hidePrompt');
-				arCuCreateCookie('arcu-closed', 1, 30);
-			});
-			jQuery('#arcontactus0').on('arcontactus.hidePrompt', function () {
-				clearTimeout(_arCuTimeOut);
-				arCuPromptClosed = true;
-				arCuCreateCookie('arcu-closed', 1, 30);
-			});
+		const url = window.location.href;
+		if (url != 'https://planbphilippines.ph/proof-of-deliveries/') {
+			var arCuMessages = [""];
+			var arCuLoop = false;
+			var arCuCloseLastMessage = false;
+			var arCuPromptClosed = false;
+			var _arCuTimeOut = null;
+			var arCuDelayFirst = 2000;
+			var arCuTypingTime = 2000;
+			var arCuMessageTime = 4000;
+			var arCuClosedCookie = 0;
+			var arcItems0 = [];
+			window.addEventListener('load', function () {
+				jQuery('#arcontactus0').on('arcontactus.openMenu', function () {
+					clearTimeout(_arCuTimeOut);
+					arCuPromptClosed = true;
+					jQuery('#contact').contactUs0('hidePrompt');
+					arCuCreateCookie('arcu-closed', 1, 30);
+				});
+				jQuery('#arcontactus0').on('arcontactus.hidePrompt', function () {
+					clearTimeout(_arCuTimeOut);
+					arCuPromptClosed = true;
+					arCuCreateCookie('arcu-closed', 1, 30);
+				});
 
-			var arcItem0 = {};
-			arcItem0.id = 'msg-item-2';
-			arcItem0.class = 'msg-item-zalo';
-			arcItem0.title = 'Via Telegram';
-			arcItem0.icon = `<?xml version="1.0" encoding="iso-8859-1"?>
+				var arcItem0 = {};
+				arcItem0.id = 'msg-item-2';
+				arcItem0.class = 'msg-item-zalo';
+				arcItem0.title = 'Via Telegram';
+				arcItem0.icon = `<?xml version="1.0" encoding="iso-8859-1"?>
 			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 			<svg fill="#F65F71" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 				viewBox="0 0 456.482 456.482" xml:space="preserve">
@@ -2711,13 +2713,15 @@
 					C442.482,341.418,413.76,370.14,378.455,370.14z"/>
 			</g>
 			</svg>`;
-			arcItem0.color = '#2EA8FF';
-			arcItems0.push(arcItem0);
+				arcItem0.color = '#2EA8FF';
+				arcItems0.push(arcItem0);
 
-			jQuery('#arcontactus0').contactUs0({
-				items: arcItems0
+				jQuery('#arcontactus0').contactUs0({
+					items: arcItems0
+				});
 			});
-		});
+		}
+
 	</script>
 </body>
 
