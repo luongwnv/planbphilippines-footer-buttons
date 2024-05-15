@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<style id="custom-css" type="text/css">
+		:root {
+			--primary-color: #2d2d2d;
+		}
+
+		.container-width,
+		.full-width .ubermenu-nav,
+		.container,
+		.row {
+			max-width: 1250px
+		}
+
+		.row.row-collapse {
+			max-width: 1220px
+		}
+
+		.row.row-small {
+			max-width: 1242.5px
+		}
+
+		.row.row-large {
+			max-width: 1280px
+		}
+
+		.header-main {
+			height: 94px
+		}
+
+		#logo img {
+			max-height: 94px
+		}
+
+		#logo {
+			width: 243px;
+		}
+
+		.header-top {
+			min-height: 30px
+		}
+
+		.transparent .header-main {
+			height: 90px
+		}
+
+		.transparent #logo img {
+			max-height: 90px
+		}
+
+		.has-transparent+.page-title:first-of-type,
+		.has-transparent+#main>.page-title,
+		.has-transparent+#main>div>.page-title,
+		.has-transparent+#main .page-header-wrapper:first-of-type .page-title {
+			padding-top: 120px;
+		}
+
+		.header.show-on-scroll,
+		.stuck .header-main {
+			height: 70px !important
+		}
+
+		.stuck #logo img {
+			max-height: 70px !important
+		}
+
+		.header-bg-color {
+			background-color: #ffffff
+		}
+
+		.header-bottom {
+			background-color: #f1f1f1
+		}
+
+		.header-main .nav>li>a {
+			line-height: 16px
+		}
+
+		@media (max-width: 549px) {
+			.header-main {
+				height: 70px
+			}
+
+			#logo img {
+				max-height: 70px
+			}
+		}
+
+		/* Color */
+		.accordion-title.active,
+		.has-icon-bg .icon .icon-inner,
+		.logo a,
+		.primary.is-underline,
+		.primary.is-link,
+		.badge-outline .badge-inner,
+		.nav-outline>li.active>a,
+		.nav-outline>li.active>a,
+		.cart-icon strong,
+		[data-color='primary'],
+		.is-outline.primary {
+			color: #2d2d2d;
+		}
+
+		/* Color !important */
+		[data-text-color="primary"] {
+			color: #2d2d2d !important;
+		}
+
+		/* Background Color */
+		[data-text-bg="primary"] {
+			background-color: #2d2d2d;
+		}
+
+		/* Background */
+		.scroll-to-bullets a,
+		.featured-title,
+		.label-new.menu-item>a:after,
+		.nav-pagination>li>.current,
+		.nav-pagination>li>span:hover,
+		.nav-pagination>li>a:hover,
+		.has-hover:hover .badge-outline .badge-inner,
+		button[type="submit"],
+		.button.wc-forward:not(.checkout):not(.checkout-button),
+		.button.submit-button,
+		.button.primary:not(.is-outline),
+		.featured-table .title,
+		.is-outline:hover,
+		.has-icon:hover .icon-label,
+		.nav-dropdown-bold .nav-column li>a:hover,
+		.nav-dropdown.nav-dropdown-bold>li>a:hover,
+		.nav-dropdown-bold.dark .nav-column li>a:hover,
+		.nav-dropdown.nav-dropdown-bold.dark>li>a:hover,
+		.header-vertical-menu__opener,
+		.is-outline:hover,
+		.tagcloud a:hover,
+		.grid-tools a,
+		input[type='submit']:not(.is-form),
+		.box-badge:hover .box-text,
+		input.button.alt,
+		.nav-box>li>a:hover,
+		.nav-box>li.active>a,
+		.nav-pills>li.active>a,
+		.current-dropdown .cart-icon strong,
+		.cart-icon:hover strong,
+		.nav-line-bottom>li>a:before,
+		.nav-line-grow>li>a:before,
+		.nav-line>li>a:before,
+		.banner,
+		.header-top,
+		.slider-nav-circle .flickity-prev-next-button:hover svg,
+		.slider-nav-circle .flickity-prev-next-button:hover .arrow,
+		.primary.is-outline:hover,
+		.button.primary:not(.is-outline),
+		input[type='submit'].primary,
+		input[type='submit'].primary,
+		input[type='reset'].button,
+		input[type='button'].primary,
+		.badge-inner {
+			background-color: #2d2d2d;
+		}
+
+		/* Border */
+		.nav-vertical.nav-tabs>li.active>a,
+		.scroll-to-bullets a.active,
+		.nav-pagination>li>.current,
+		.nav-pagination>li>span:hover,
+		.nav-pagination>li>a:hover,
+		.has-hover:hover .badge-outline .badge-inner,
+		.accordion-title.active,
+		.featured-table,
+		.is-outline:hover,
+		.tagcloud a:hover,
+		blockquote,
+		.has-border,
+		.cart-icon strong:after,
+		.cart-icon strong,
+		.blockUI:before,
+		.processing:before,
+		.loading-spin,
+		.slider-nav-circle .flickity-prev-next-button:hover svg,
+		.slider-nav-circle .flickity-prev-next-button:hover .arrow,
+		.primary.is-outline:hover {
+			border-color: #2d2d2d
+		}
+
+		.nav-tabs>li.active>a {
+			border-top-color: #2d2d2d
+		}
+
+		.widget_shopping_cart_content .blockUI.blockOverlay:before {
+			border-left-color: #2d2d2d
+		}
+
+		.woocommerce-checkout-review-order .blockUI.blockOverlay:before {
+			border-left-color: #2d2d2d
+		}
+
+		/* Fill */
+		.slider .flickity-prev-next-button:hover svg,
+		.slider .flickity-prev-next-button:hover .arrow {
+			fill: #2d2d2d;
+		}
+
+		/* Focus */
+		.primary:focus-visible,
+		.submit-button:focus-visible,
+		button[type="submit"]:focus-visible {
+			outline-color: #2d2d2d !important;
+		}
+
+		body {
+			color: #2d2d2d
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.heading-font {
+			color: #2d2d2d;
+		}
+
+		body {
+			font-size: 100%;
+		}
+
+		body {
+			font-family: Montserrat, sans-serif;
+		}
+
+		body {
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		.nav>li>a {
+			font-family: Montserrat, sans-serif;
+		}
+
+		.mobile-sidebar-levels-2 .nav>li>ul>li>a {
+			font-family: Montserrat, sans-serif;
+		}
+
+		.nav>li>a,
+		.mobile-sidebar-levels-2 .nav>li>ul>li>a {
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.heading-font,
+		.off-canvas-center .nav-sidebar.nav-vertical>li>a {
+			font-family: Montserrat, sans-serif;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.heading-font,
+		.banner h1,
+		.banner h2 {
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		.alt-font {
+			font-family: "Dancing Script", sans-serif;
+		}
+
+		.alt-font {
+			font-weight: 400 !important;
+			font-style: normal !important;
+		}
+
+		a {
+			color: #2d2d2d;
+		}
+
+		@media screen and (min-width: 550px) {
+			.products .box-vertical .box-image {
+				min-width: 300px !important;
+				width: 300px !important;
+			}
+		}
+
+		.page-title-small+main .product-container>.row {
+			padding-top: 0;
+		}
+
+		.nav-vertical-fly-out>li+li {
+			border-top-width: 1px;
+			border-top-style: solid;
+		}
+
+		/* Custom CSS */
+		.processing:before {
+			display: none
+		}
+
+		.glink span {
+			color: white
+		}
+
+		.p-chay-chu {
+			font-weight: 700;
+			text-align: left;
+			font-size: 40px;
+			font-family: Hack, sans-serif;
+			text-transform: uppercase;
+			background: linear-gradient(90deg, #e21111, #fff, #2c8951);
+			letter-spacing: 5px;
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-repeat: no-repeat;
+			background-size: 80%;
+			animation: shine 5s linear infinite;
+			position: relative;
+		}
+
+		@keyframes shine {
+			0% {
+				background-position-x: -500%;
+			}
+
+			100% {
+				background-position-x: 500%;
+			}
+		}
+
+		.gradientfooter {
+			background: linear-gradient(-45deg, #2c923a, #79cc7f, #44aa3c, #3d9c49);
+			background-size: 200% 200%;
+			animation: gradient 8s ease infinite;
+			height: 70vh;
+		}
+
+		@keyframes gradient {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+		.section-4 .col-divided {
+			border-right: none;
+		}
+
+		.section-4 .col.col-divided:not(.col-first):last-child {
+			border-left: none;
+		}
+
+		td,
+		th {
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+		.text-title h1,
+		.text-title h2,
+		.text-title h3,
+		.text-title h4,
+		.text-title h5 {
+			font-size: 20px;
+			color: #43a246;
+		}
+
+		/* Custom CSS Mobile */
+		@media (max-width: 549px) {
+			.column-half {
+				width: 50%;
+			}
+
+			table colgroup {
+				max-width: 100% !important;
+			}
+
+			table {
+				max-width: 350px !important;
+			}
+
+			.wp-caption {
+				max-width: 350px !important;
+			}
+		}
+
+		.label-new.menu-item>a:after {
+			content: "New";
+		}
+
+		.label-hot.menu-item>a:after {
+			content: "Hot";
+		}
+
+		.label-sale.menu-item>a:after {
+			content: "Sale";
+		}
+
+		.label-popular.menu-item>a:after {
+			content: "Popular";
+		}
+	</style>
+</head>
+
+<body data-rsssl=1>
+	<style>
+		.arcontactus0-widget.right.arcontactus0-message {
+			right: 20px
+		}
+
+		.arcontactus0-widget.right.arcontactus0-message {
+			bottom: 20px
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .pulsation {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s
+		}
+
+		.arcontactus0-widget.md .arcontactus0-message-button,
+		.arcontactus0-widget.md.arcontactus0-message {
+			width: 60px;
+			height: 60px
+		}
+
+		.arcontactus0-widget {
+			opacity: 0;
+			transition: .2s opacity
+		}
+
+		.arcontactus0-widget * {
+			box-sizing: border-box
+		}
+
+		.arcontactus0-widget.left.arcontactus0-message {
+			left: 0;
+			right: 20px
+		}
+
+		.arcontactus0-widget.left .arcontactus0-message-button {
+			right: auto;
+			left: 20px;
+		}
+
+		.arcontactus0-widget.left .arcontactus0-prompt {
+			left: 80px;
+			right: auto;
+			transform-origin: 0 50%
+		}
+
+		.arcontactus0-widget.left .arcontactus0-prompt:before {
+			border-right: 8px solid #ECC3CE;
+			border-top: 8px solid transparent;
+			border-left: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			right: auto;
+			left: -15px
+		}
+
+		.arcontactus0-widget.left .messangers-block {
+			right: auto;
+			left: 0;
+			-webkit-transform-origin: 10% 105%;
+			-ms-transform-origin: 10% 105%;
+			transform-origin: 10% 105%
+		}
+
+		.arcontactus0-widget.left .callback-countdown-block {
+			left: 0;
+			right: auto
+		}
+
+		.arcontactus0-widget.left .callback-countdown-block::before,
+		.arcontactus0-widget.left .messangers-block::before {
+			left: 25px;
+			right: auto
+		}
+
+		.arcontactus0-widget.md .callback-countdown-block,
+		.arcontactus0-widget.md .messangers-block {
+			bottom: 70px
+		}
+
+		.arcontactus0-widget.md .arcontactus0-prompt {
+			bottom: 5px
+		}
+
+		.arcontactus0-widget.md.left .callback-countdown-block:before,
+		.arcontactus0-widget.md.left .messangers-block:before {
+			left: 21px
+		}
+
+		.arcontactus0-widget.md.left .arcontactus0-prompt {
+			left: 70px
+		}
+
+		.arcontactus0-widget.md.right .callback-countdown-block:before,
+		.arcontactus0-widget.md.right .messangers-block:before {
+			right: 21px
+		}
+
+		.arcontactus0-widget.md.right .arcontactus0-prompt {
+			right: 70px
+		}
+
+		.arcontactus0-widget.md .arcontactus0-message-button .pulsation {
+			width: 184px;
+			height: 84px;
+		}
+
+		arcontactus0-widget.md .arcontactus0-message-button .arcu-button-content {
+			margin-left: 30px;
+			color: white;
+		}
+
+		.arcontactus0-widget.md .arcontactus0-message-button .callback-state,
+		.arcontactus0-widget.md .arcontactus0-message-button .icons {
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			margin-left: -20px
+		}
+
+		.arcontactus0-widget.sm .arcontactus0-message-button,
+		.arcontactus0-widget.sm.arcontactus0-message {
+			width: 50px;
+			height: 50px
+		}
+
+		.arcontactus0-widget.sm .callback-countdown-block,
+		.arcontactus0-widget.sm .messangers-block {
+			bottom: 60px
+		}
+
+		.arcontactus0-widget.sm .arcontactus0-prompt {
+			bottom: 0
+		}
+
+		.arcontactus0-widget.sm.left .callback-countdown-block:before,
+		.arcontactus0-widget.sm.left .messangers-block:before {
+			left: 16px
+		}
+
+		.arcontactus0-widget.sm.left .arcontactus0-prompt {
+			left: 60px
+		}
+
+		.arcontactus0-widget.sm.right .callback-countdown-block:before,
+		.arcontactus0-widget.sm.right .messangers-block:before {
+			right: 16px
+		}
+
+		.arcontactus0-widget.sm.right .arcontactus0-prompt {
+			right: 60px
+		}
+
+		.arcontactus0-widget.sm .arcontactus0-message-button .pulsation {
+			width: 184px;
+			height: 84px;
+		}
+
+		.arcontactus0-widget.sm .arcontactus0-message-button .icons {
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			margin-left: -20px
+		}
+
+		.arcontactus0-widget.sm .arcontactus0-message-button .static {
+			margin-top: -16px;
+			background-color: #fff;
+			width: 44px;
+			height: 44px;
+			border-radius: 50px;
+			position: absolute;
+			overflow: hidden;
+			top: 50%;
+			left: 20%;
+			margin-top: -22px;
+			margin-left: -22px
+		}
+
+		.arcontactus0-widget.sm .arcontactus0-message-button .callback-state {
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			margin-left: -20px
+		}
+
+		.arcontactus0-widget.active {
+			opacity: 1
+		}
+
+		.arcontactus0-widget .icons.hide,
+		.arcontactus0-widget .static.hide {
+			opacity: 0;
+			transform: scale(0)
+		}
+
+		.arcontactus0-widget.arcontactus0-message {
+			z-index: 10000;
+			right: 20px;
+			bottom: 20px;
+			position: fixed !important;
+			height: 60px;
+			width: 176px
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button {
+			width: 150px;
+			position: absolute;
+			height: 60px;
+			right: 0;
+			background-color: red;
+			border-radius: 50px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			text-align: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			cursor: pointer
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button p {
+			font-family: Ubuntu, Arial, sans-serif;
+			color: #fff;
+			font-weight: 700;
+			font-size: 10px;
+			line-height: 11px;
+			margin: 0
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .pulsation {
+			width: 184px;
+			height: 84px;
+			background-color: red;
+			border-radius: 50px;
+			position: absolute;
+			left: -18px;
+			top: -12px;
+			z-index: -1;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			-webkit-animation: arcontactus0-pulse 2s infinite;
+			animation: arcontactus0-pulse 2s infinite
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .arcu-button-content {
+			margin-left: 30px;
+			color: white;
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .icons {
+			background-color: #fff;
+			width: 44px;
+			height: 44px;
+			border-radius: 50px;
+			position: absolute;
+			overflow: hidden;
+			top: 50%;
+			left: 20%;
+			margin-top: -22px;
+			margin-left: -22px
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .static {
+			background-color: #fff;
+			width: 44px;
+			height: 44px;
+			border-radius: 50px;
+			position: absolute;
+			overflow: hidden;
+			top: 50%;
+			left: 20%;
+			margin-top: -22px;
+			margin-left: -22px
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .static img {
+			display: inline
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button .static svg {
+			margin-top: 10px;
+			width: 24px;
+			height: 24px;
+			color: #FFF
+		}
+
+		.arcontactus0-widget .arcontactus0-message-button.no-text .static {
+			margin-top: -12px
+		}
+
+		.arcontactus0-widget .pulsation:nth-of-type(2n) {
+			-webkit-animation-delay: .5s;
+			animation-delay: .5s
+		}
+
+		.arcontactus0-widget .pulsation.stop {
+			-webkit-animation: none;
+			animation: none
+		}
+
+		.arcontactus0-widget .icons-line {
+			top: 10px;
+			left: 12px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: absolute;
+			-webkit-transition: cubic-bezier(.13, 1.49, .14, -.4);
+			-o-transition: cubic-bezier(.13, 1.49, .14, -.4);
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+			-webkit-transform: translateX(30px);
+			-ms-transform: translateX(30px);
+			transform: translateX(30px);
+			height: 24px;
+			transition: .2s all
+		}
+
+		.arcontactus0-widget .icons,
+		.arcontactus0-widget .static {
+			transition: .2s all
+		}
+
+		.arcontactus0-widget .icons-line.stop {
+			-webkit-animation-play-state: paused;
+			animation-play-state: paused
+		}
+
+		.arcontactus0-widget .icons-line span {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			color: red
+		}
+
+		.arcontactus0-widget .icons-line span i,
+		.arcontactus0-widget .icons-line span svg {
+			width: 24px;
+			height: 24px
+		}
+
+		.arcontactus0-widget .icons-line span i {
+			display: block;
+			font-size: 24px;
+			line-height: 24px
+		}
+
+		.arcontactus0-widget .icons-line img,
+		.arcontactus0-widget .icons-line span {
+			margin-right: 40px
+		}
+
+		.arcontactus0-widget .icons.hide .icons-line {
+			transform: scale(0)
+		}
+
+		.arcontactus0-widget .icons .icon:first-of-type {
+			margin-left: 0
+		}
+
+		.arcontactus0-widget .arcontactus0-close {
+			color: #FFF
+		}
+
+		.arcontactus0-widget .arcontactus0-close svg {
+			-webkit-transform: rotate(180deg) scale(0);
+			-ms-transform: rotate(180deg) scale(0);
+			transform: rotate(180deg) scale(0);
+			-webkit-transition: ease-in .12s all;
+			-o-transition: ease-in .12s all;
+			transition: ease-in .12s all;
+			display: block
+		}
+
+		.arcontactus0-widget .arcontactus0-close.show-messageners-block svg {
+			-webkit-transform: rotate(0) scale(1);
+			-ms-transform: rotate(0) scale(1);
+			transform: rotate(0) scale(1)
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt,
+		.arcontactus0-widget .messangers-block {
+			background: center no-repeat #FFF;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+			width: 245px;
+			position: absolute;
+			bottom: 80px;
+			right: 0;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-align: start;
+			-ms-flex-align: start;
+			align-items: flex-start;
+			padding: 14px 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			border-radius: 7px;
+			-webkit-transform-origin: 80% 105%;
+			-ms-transform-origin: 80% 105%;
+			transform-origin: 80% 105%;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			-webkit-transition: ease-out .12s all;
+			-o-transition: ease-out .12s all;
+			transition: ease-out .12s all;
+			z-index: 10000;
+			background-color: #ECC3CE;
+
+			@media (max-width: 500px) {
+				width: 100vw;
+				border-radius: 0px;
+				bottom: -20px;
+				right: -20px;
+			}
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt:before,
+		.arcontactus0-widget .messangers-block:before {
+			position: absolute;
+			bottom: -7px;
+			right: 25px;
+			left: auto;
+			display: inline-block !important;
+			border-right: 8px solid transparent;
+			border-top: 8px solid #ECC3CE;
+			border-left: 8px solid transparent;
+			content: ''
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt.show-messageners-block,
+		.arcontactus0-widget .messangers-block.show-messageners-block {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt {
+			color: #787878;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 18px;
+			width: auto;
+			bottom: 10px;
+			right: 80px;
+			white-space: nowrap;
+			padding: 18px 20px 14px
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt:before {
+			border-right: 8px solid transparent;
+			border-top: 8px solid transparent;
+			border-left: 8px solid #ECC3CE;
+			border-bottom: 8px solid transparent;
+			bottom: 16px;
+			right: -15px
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt.active {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1)
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt .arcontactus0-prompt-close {
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			cursor: pointer;
+			z-index: 100;
+			height: 14px;
+			width: 14px;
+			padding: 2px
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt .arcontactus0-prompt-close svg {
+			height: 10px;
+			width: 10px;
+			display: block
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt .arcontactus0-prompt-typing {
+			border-radius: 10px;
+			display: inline-block;
+			left: 3px;
+			padding: 0;
+			position: relative;
+			top: 4px;
+			width: 50px
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt .arcontactus0-prompt-typing>div {
+			position: relative;
+			float: left;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background: #ccc;
+			margin: 0 2px;
+			-webkit-animation: arcontactus0-updown 2s infinite;
+			animation: arcontactus0-updown 2s infinite
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt .arcontactus0-prompt-typing>div:nth-child(2) {
+			animation-delay: .1s
+		}
+
+		.arcontactus0-widget .arcontactus0-prompt .arcontactus0-prompt-typing>div:nth-child(3) {
+			animation-delay: .2s
+		}
+
+		.arcontactus0-widget .messangers-block.sm .messanger {
+			padding-left: 50px;
+			min-height: 44px
+		}
+
+		.arcontactus0-widget .messangers-block.sm .messanger span {
+			height: 32px;
+			width: 32px;
+			margin-top: -16px
+		}
+
+		.arcontactus0-widget .messangers-block.sm .messanger span svg {
+			height: 20px;
+			width: 20px;
+			margin-top: -10px;
+			margin-left: -10px
+		}
+
+		.arcontactus0-widget .messanger {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			margin: 0;
+			cursor: pointer;
+			width: 100%;
+			padding: 8px 20px 8px 60px;
+			position: relative;
+			min-height: 54px;
+			text-decoration: none
+		}
+
+		.arcontactus0-widget .messanger:hover {
+			background-color: #EEE
+		}
+
+		.arcontactus0-widget .messanger:before {
+			background-repeat: no-repeat;
+			background-position: center
+		}
+
+		.arcontactus0-widget .messanger.facebook span {
+			background: #0084ff
+		}
+
+		.arcontactus0-widget .messanger.viber span {
+			background: #7c529d
+		}
+
+		.arcontactus0-widget .messanger.telegram span {
+			background: #2ca5e0
+		}
+
+		.arcontactus0-widget .messanger.skype span {
+			background: #31c4ed
+		}
+
+		.arcontactus0-widget .messanger.email span {
+			background: #ff8400
+		}
+
+		.arcontactus0-widget .messanger.contact span {
+			background: #7eb105
+		}
+
+		.arcontactus0-widget .messanger.call-back span {
+			background: #54cd81
+		}
+
+		.arcontactus0-widget .messanger span {
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -20px;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: #0084ff;
+			margin-right: 10px;
+			color: #FFF;
+			text-align: center;
+			vertical-align: middle
+		}
+
+		.arcontactus0-widget .messanger span i,
+		.arcontactus0-widget .messanger span svg {
+			width: 24px;
+			height: 24px;
+			vertical-align: middle;
+			text-align: center;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -12px;
+			margin-left: -12px
+		}
+
+		.arcontactus0-widget .messanger span i {
+			font-size: 24px;
+			line-height: 24px
+		}
+
+		.arcontactus0-widget .messanger p {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			color: rgba(0, 0, 0, .87)
+		}
+
+		@-webkit-keyframes arcontactus0-pulse {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				opacity: 1
+			}
+
+			50% {
+				opacity: .5
+			}
+
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+
+		@media (max-width:468px) {
+
+			.arcontactus0-widget.opened.arcontactus0-message,
+			.arcontactus0-widget.opened.left.arcontactus0-message {
+				width: auto;
+				right: 20px;
+				left: 20px
+			}
+		}
+
+		@keyframes arcontactus0-updown {
+
+			0%,
+			100%,
+			43% {
+				transform: translate(0, 0)
+			}
+
+			25%,
+			35% {
+				transform: translate(0, -10px)
+			}
+		}
+
+		@-webkit-keyframes arcontactus0-updown {
+
+			0%,
+			100%,
+			43% {
+				transform: translate(0 0)
+			}
+
+			25%,
+			35% {
+				transform: translate(-10px 0)
+			}
+		}
+
+		@keyframes arcontactus0-pulse {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				opacity: 1
+			}
+
+			50% {
+				opacity: .5
+			}
+
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+
+		@-webkit-keyframes arcontactus0-show-stat {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+		}
+
+		@keyframes arcontactus0-show-stat {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+		}
+
+		@-webkit-keyframes arcontactus0-show-icons {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+
+		@keyframes arcontactus0-show-icons {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+	</style>
+
+	<style>
+		.arcontactus-widget.right.arcontactus-message {
+			right: 20px
+		}
+
+		.arcontactus-widget.right.arcontactus-message {
+			bottom: 20px
+		}
+
+		.arcontactus-widget .arcontactus-message-button .pulsation {
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s
+		}
+
+		.arcontactus-widget.md .arcontactus-message-button,
+		.arcontactus-widget.md.arcontactus-message {
+			width: 60px;
+			height: 60px
+		}
+
+		.arcontactus-widget {
+			opacity: 0;
+			transition: .2s opacity
+		}
+
+		.arcontactus-widget * {
+			box-sizing: border-box
+		}
+
+		.arcontactus-widget.left.arcontactus-message {
+			left: 20px;
+			right: auto
+		}
+
+		.arcontactus-widget.left .arcontactus-message-button {
+			right: auto;
+			left: 0
+		}
+
+		.arcontactus-widget.left .arcontactus-prompt {
+			left: 80px;
+			right: auto;
+			transform-origin: 0 50%
+		}
+
+		.arcontactus-widget.left .arcontactus-prompt:before {
+			border-right: 8px solid #ECC3CE;
+			border-top: 8px solid transparent;
+			border-left: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			right: auto;
+			left: -15px
+		}
+
+		.arcontactus-widget.left .messangers-block {
+			right: auto;
+			left: 0;
+			-webkit-transform-origin: 10% 105%;
+			-ms-transform-origin: 10% 105%;
+			transform-origin: 10% 105%
+		}
+
+		.arcontactus-widget.left .callback-countdown-block {
+			left: 0;
+			right: auto
+		}
+
+		.arcontactus-widget.left .callback-countdown-block::before,
+		.arcontactus-widget.left .messangers-block::before {
+			left: 25px;
+			right: auto
+		}
+
+		.arcontactus-widget.md .callback-countdown-block,
+		.arcontactus-widget.md .messangers-block {
+			bottom: 70px
+		}
+
+		.arcontactus-widget.md .arcontactus-prompt {
+			bottom: 5px
+		}
+
+		.arcontactus-widget.md.left .callback-countdown-block:before,
+		.arcontactus-widget.md.left .messangers-block:before {
+			left: 21px
+		}
+
+		.arcontactus-widget.md.left .arcontactus-prompt {
+			left: 70px
+		}
+
+		.arcontactus-widget.md.right .callback-countdown-block:before,
+		.arcontactus-widget.md.right .messangers-block:before {
+			right: 21px
+		}
+
+		.arcontactus-widget.md.right .arcontactus-prompt {
+			right: 70px
+		}
+
+		.arcontactus-widget.md .arcontactus-message-button .pulsation {
+			width: 184px;
+			height: 84px;
+		}
+
+		arcontactus-widget.md .arcontactus-message-button .arcu-button-content {
+			margin-left: 30px;
+			color: white;
+		}
+
+		.arcontactus-widget.md .arcontactus-message-button .callback-state,
+		.arcontactus-widget.md .arcontactus-message-button .icons {
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			margin-left: -20px
+		}
+
+		.arcontactus-widget.sm .arcontactus-message-button,
+		.arcontactus-widget.sm.arcontactus-message {
+			width: 50px;
+			height: 50px
+		}
+
+		.arcontactus-widget.sm .callback-countdown-block,
+		.arcontactus-widget.sm .messangers-block {
+			bottom: 60px
+		}
+
+		.arcontactus-widget.sm .arcontactus-prompt {
+			bottom: 0
+		}
+
+		.arcontactus-widget.sm.left .callback-countdown-block:before,
+		.arcontactus-widget.sm.left .messangers-block:before {
+			left: 16px
+		}
+
+		.arcontactus-widget.sm.left .arcontactus-prompt {
+			left: 60px
+		}
+
+		.arcontactus-widget.sm.right .callback-countdown-block:before,
+		.arcontactus-widget.sm.right .messangers-block:before {
+			right: 16px
+		}
+
+		.arcontactus-widget.sm.right .arcontactus-prompt {
+			right: 60px
+		}
+
+		.arcontactus-widget.sm .arcontactus-message-button .pulsation {
+			width: 184px;
+			height: 84px;
+		}
+
+		.arcontactus-widget.sm .arcontactus-message-button .icons {
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			margin-left: -20px
+		}
+
+		.arcontactus-widget.sm .arcontactus-message-button .static {
+			margin-top: -16px
+		}
+
+		.arcontactus-widget.sm .arcontactus-message-button .callback-state {
+			width: 40px;
+			height: 40px;
+			margin-top: -20px;
+			margin-left: -20px
+		}
+
+		.arcontactus-widget.active {
+			opacity: 1
+		}
+
+		.arcontactus-widget .icons.hide,
+		.arcontactus-widget .static.hide {
+			opacity: 0;
+			transform: scale(0)
+		}
+
+		.arcontactus-widget.arcontactus-message {
+			z-index: 10000;
+			right: 20px;
+			bottom: 20px;
+			position: fixed !important;
+			height: 60px;
+			width: 176px
+		}
+
+		.arcontactus-widget .arcontactus-message-button {
+			width: 150px;
+			position: absolute;
+			height: 60px;
+			right: 0;
+			background-color: red;
+			border-radius: 50px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			text-align: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			cursor: pointer
+		}
+
+		.arcontactus-widget .arcontactus-message-button p {
+			font-family: Ubuntu, Arial, sans-serif;
+			color: #fff;
+			font-weight: 700;
+			font-size: 10px;
+			line-height: 11px;
+			margin: 0
+		}
+
+		.arcontactus-widget .arcontactus-message-button .pulsation {
+			width: 184px;
+			height: 84px;
+			background-color: red;
+			border-radius: 50px;
+			position: absolute;
+			left: -18px;
+			top: -12px;
+			z-index: -1;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			-webkit-animation: arcontactus-pulse 2s infinite;
+			animation: arcontactus-pulse 2s infinite
+		}
+
+		.arcontactus-widget .arcontactus-message-button .arcu-button-content {
+			margin-left: 30px;
+			color: white;
+		}
+
+		.arcontactus-widget .arcontactus-message-button .icons {
+			background-color: #fff;
+			width: 44px;
+			height: 44px;
+			border-radius: 50px;
+			position: absolute;
+			overflow: hidden;
+			top: 50%;
+			left: 20%;
+			margin-top: -22px;
+			margin-left: -22px
+		}
+
+		.arcontactus-widget .arcontactus-message-button .static {
+			position: absolute;
+			top: 60%;
+			left: 20%;
+			margin-top: -19px;
+			margin-left: -26px;
+			width: 52px;
+			height: 52px;
+			text-align: center
+		}
+
+		.arcontactus-widget .arcontactus-message-button .static img {
+			display: inline
+		}
+
+		.arcontactus-widget .arcontactus-message-button .static svg {
+			width: 24px;
+			height: 24px;
+			color: #FFF
+		}
+
+		.arcontactus-widget .arcontactus-message-button.no-text .static {
+			margin-top: -12px
+		}
+
+		.arcontactus-widget .pulsation:nth-of-type(2n) {
+			-webkit-animation-delay: .5s;
+			animation-delay: .5s
+		}
+
+		.arcontactus-widget .pulsation.stop {
+			-webkit-animation: none;
+			animation: none
+		}
+
+		.arcontactus-widget .icons-line {
+			top: 10px;
+			left: 12px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: absolute;
+			-webkit-transition: cubic-bezier(.13, 1.49, .14, -.4);
+			-o-transition: cubic-bezier(.13, 1.49, .14, -.4);
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+			-webkit-transform: translateX(30px);
+			-ms-transform: translateX(30px);
+			transform: translateX(30px);
+			height: 24px;
+			transition: .2s all
+		}
+
+		.arcontactus-widget .icons,
+		.arcontactus-widget .static {
+			transition: .2s all
+		}
+
+		.arcontactus-widget .icons-line.stop {
+			-webkit-animation-play-state: paused;
+			animation-play-state: paused
+		}
+
+		.arcontactus-widget .icons-line span {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			color: red
+		}
+
+		.arcontactus-widget .icons-line span i,
+		.arcontactus-widget .icons-line span svg {
+			width: 24px;
+			height: 24px
+		}
+
+		.arcontactus-widget .icons-line span i {
+			display: block;
+			font-size: 24px;
+			line-height: 24px
+		}
+
+		.arcontactus-widget .icons-line img,
+		.arcontactus-widget .icons-line span {
+			margin-right: 40px
+		}
+
+		.arcontactus-widget .icons.hide .icons-line {
+			transform: scale(0)
+		}
+
+		.arcontactus-widget .icons .icon:first-of-type {
+			margin-left: 0
+		}
+
+		.arcontactus-widget .arcontactus-close {
+			color: #FFF
+		}
+
+		.arcontactus-widget .arcontactus-close svg {
+			-webkit-transform: rotate(180deg) scale(0);
+			-ms-transform: rotate(180deg) scale(0);
+			transform: rotate(180deg) scale(0);
+			-webkit-transition: ease-in .12s all;
+			-o-transition: ease-in .12s all;
+			transition: ease-in .12s all;
+			display: block
+		}
+
+		.arcontactus-widget .arcontactus-close.show-messageners-block svg {
+			-webkit-transform: rotate(0) scale(1);
+			-ms-transform: rotate(0) scale(1);
+			transform: rotate(0) scale(1)
+		}
+
+		.arcontactus-widget .arcontactus-prompt,
+		.arcontactus-widget .messangers-block {
+			background: center no-repeat #FFF;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+			width: 245px;
+			position: absolute;
+			bottom: 80px;
+			right: 0;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-align: start;
+			-ms-flex-align: start;
+			align-items: flex-start;
+			padding: 14px 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			border-radius: 7px;
+			-webkit-transform-origin: 80% 105%;
+			-ms-transform-origin: 80% 105%;
+			transform-origin: 80% 105%;
+			-webkit-transform: scale(0);
+			-ms-transform: scale(0);
+			transform: scale(0);
+			-webkit-transition: ease-out .12s all;
+			-o-transition: ease-out .12s all;
+			transition: ease-out .12s all;
+			z-index: 10000;
+			background-color: #ECC3CE;
+
+			@media (max-width: 500px) {
+				width: 100vw;
+				border-radius: 0px;
+				bottom: -20px;
+				right: -20px;
+			}
+		}
+
+		.arcontactus-widget .arcontactus-prompt:before,
+		.arcontactus-widget .messangers-block:before {
+			position: absolute;
+			bottom: -7px;
+			right: 25px;
+			left: auto;
+			display: inline-block !important;
+			border-right: 8px solid transparent;
+			border-top: 8px solid #ECC3CE;
+			border-left: 8px solid transparent;
+			content: ''
+		}
+
+		.arcontactus-widget .arcontactus-prompt.show-messageners-block,
+		.arcontactus-widget .messangers-block.show-messageners-block {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+		}
+
+		.arcontactus-widget .arcontactus-prompt {
+			color: #787878;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 18px;
+			width: auto;
+			bottom: 10px;
+			right: 80px;
+			white-space: nowrap;
+			padding: 18px 20px 14px
+		}
+
+		.arcontactus-widget .arcontactus-prompt:before {
+			border-right: 8px solid transparent;
+			border-top: 8px solid transparent;
+			border-left: 8px solid #ECC3CE;
+			border-bottom: 8px solid transparent;
+			bottom: 16px;
+			right: -15px
+		}
+
+		.arcontactus-widget .arcontactus-prompt.active {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1)
+		}
+
+		.arcontactus-widget .arcontactus-prompt .arcontactus-prompt-close {
+			position: absolute;
+			right: 6px;
+			top: 6px;
+			cursor: pointer;
+			z-index: 100;
+			height: 14px;
+			width: 14px;
+			padding: 2px
+		}
+
+		.arcontactus-widget .arcontactus-prompt .arcontactus-prompt-close svg {
+			height: 10px;
+			width: 10px;
+			display: block
+		}
+
+		.arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing {
+			border-radius: 10px;
+			display: inline-block;
+			left: 3px;
+			padding: 0;
+			position: relative;
+			top: 4px;
+			width: 50px
+		}
+
+		.arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing>div {
+			position: relative;
+			float: left;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background: #ccc;
+			margin: 0 2px;
+			-webkit-animation: arcontactus-updown 2s infinite;
+			animation: arcontactus-updown 2s infinite
+		}
+
+		.arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing>div:nth-child(2) {
+			animation-delay: .1s
+		}
+
+		.arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing>div:nth-child(3) {
+			animation-delay: .2s
+		}
+
+		.arcontactus-widget .messangers-block.sm .messanger {
+			padding-left: 50px;
+			min-height: 44px
+		}
+
+		.arcontactus-widget .messangers-block.sm .messanger span {
+			height: 32px;
+			width: 32px;
+			margin-top: -16px
+		}
+
+		.arcontactus-widget .messangers-block.sm .messanger span svg {
+			height: 20px;
+			width: 20px;
+			margin-top: -10px;
+			margin-left: -10px
+		}
+
+		.arcontactus-widget .messanger {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			margin: 0;
+			cursor: pointer;
+			width: 100%;
+			padding: 8px 20px 8px 60px;
+			position: relative;
+			min-height: 54px;
+			text-decoration: none
+		}
+
+		.arcontactus-widget .messanger:hover {
+			background-color: #EEE
+		}
+
+		.arcontactus-widget .messanger:before {
+			background-repeat: no-repeat;
+			background-position: center
+		}
+
+		.arcontactus-widget .messanger.facebook span {
+			background: #0084ff
+		}
+
+		.arcontactus-widget .messanger.viber span {
+			background: #7c529d
+		}
+
+		.arcontactus-widget .messanger.telegram span {
+			background: #2ca5e0
+		}
+
+		.arcontactus-widget .messanger.skype span {
+			background: #31c4ed
+		}
+
+		.arcontactus-widget .messanger.email span {
+			background: #ff8400
+		}
+
+		.arcontactus-widget .messanger.contact span {
+			background: #7eb105
+		}
+
+		.arcontactus-widget .messanger.call-back span {
+			background: #54cd81
+		}
+
+		.arcontactus-widget .messanger span {
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -20px;
+			display: block;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: #0084ff;
+			margin-right: 10px;
+			color: #FFF;
+			text-align: center;
+			vertical-align: middle
+		}
+
+		.arcontactus-widget .messanger span i,
+		.arcontactus-widget .messanger span svg {
+			width: 24px;
+			height: 24px;
+			vertical-align: middle;
+			text-align: center;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -12px;
+			margin-left: -12px
+		}
+
+		.arcontactus-widget .messanger span i {
+			font-size: 24px;
+			line-height: 24px
+		}
+
+		.arcontactus-widget .messanger p {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			color: rgba(0, 0, 0, .87)
+		}
+
+		@-webkit-keyframes arcontactus-pulse {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				opacity: 1
+			}
+
+			50% {
+				opacity: .5
+			}
+
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+
+		@media (max-width:468px) {
+
+			.arcontactus-widget.opened.arcontactus-message,
+			.arcontactus-widget.opened.left.arcontactus-message {
+				width: auto;
+				right: 20px;
+				left: 20px
+			}
+		}
+
+		@keyframes arcontactus-updown {
+
+			0%,
+			100%,
+			43% {
+				transform: translate(0, 0)
+			}
+
+			25%,
+			35% {
+				transform: translate(0, -10px)
+			}
+		}
+
+		@-webkit-keyframes arcontactus-updown {
+
+			0%,
+			100%,
+			43% {
+				transform: translate(0 0)
+			}
+
+			25%,
+			35% {
+				transform: translate(-10px 0)
+			}
+		}
+
+		@keyframes arcontactus-pulse {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				opacity: 1
+			}
+
+			50% {
+				opacity: .5
+			}
+
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+
+		@-webkit-keyframes arcontactus-show-stat {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+		}
+
+		@keyframes arcontactus-show-stat {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+		}
+
+		@-webkit-keyframes arcontactus-show-icons {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+
+		@keyframes arcontactus-show-icons {
+
+			0%,
+			100%,
+			20%,
+			85% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+
+			21%,
+			84% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+	</style>
+
+	<div id='arcontactus0'></div>
+	<div id='arcontactus'></div>
+
+	<script>
+
+		function arCuCreateCookie(t, e, s) {
+			var n;
+			if (s) {
+				var i = new Date();
+				i.setTime(i.getTime() + 24 * s * 60 * 60 * 1e3),
+					(n = "; expires=" + i.toGMTString());
+			} else n = "";
+			document.cookie = t + "=" + e + n + "; path=/";
+		}
+		!(function (t) {
+			function e(s, n) {
+				(this._initialized = !1),
+					(this.settings = null),
+					(this.options = t.extend({}, e.Defaults, n)),
+					(this.$element = t(s)),
+					this.init(),
+					(this.x = 0),
+					(this.y = 0),
+					this._interval,
+					(this._menuOpened = !1),
+					(this._callbackOpened = !1),
+					(this.countdown = null);
+			}
+			(e.Defaults = {
+				align: "right",
+				countdown: 0,
+				drag: !1,
+				buttonText: "",
+				buttonSize: "large",
+				menuSize: "normal",
+				items: [],
+				iconsAnimationSpeed: 1200,
+				theme: "#F65F71",
+				buttonIcon:
+					'<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-825 -308)"><g id="Vector"><use xlink:href="#path0_fill0123" transform="translate(825 308)" fill="#FFFFFF"/></g></g><defs><path id="path0_fill0123" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"/></defs></svg>',
+				closeIcon:
+					'<svg width="12" height="13" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-4087 108)"><g id="Vector"><use xlink:href="#path0_fill" transform="translate(4087 -108)" fill="currentColor"></use></g></g><defs><path id="path0_fill" d="M 14 1.41L 12.59 0L 7 5.59L 1.41 0L 0 1.41L 5.59 7L 0 12.59L 1.41 14L 7 8.41L 12.59 14L 14 12.59L 8.41 7L 14 1.41Z"></path></defs></svg>',
+			}),
+				(e.prototype.init = function () {
+					this.destroy(),
+						(this.settings = t.extend({}, this.options)),
+						this.$element
+							.addClass("arcontactus-widget")
+							.addClass("arcontactus-message"),
+						"left" === this.settings.align
+							? this.$element.addClass("left")
+							: this.$element.addClass("right"),
+						this.settings.items.length
+							? (this._initCallbackBlock(),
+								this._initMessengersBlock(),
+								this._initMessageButton(),
+								this._initPrompt(),
+								this._initEvents(),
+								this.startAnimation(),
+								this.$element.addClass("active"))
+							: console.info("jquery.contactus:no items"),
+						(this._initialized = !0),
+						this.$element.trigger("arcontactus.init");
+				}),
+				(e.prototype.destroy = function () {
+					if (!this._initialized) return !1;
+					this.$element.html(""),
+						(this._initialized = !1),
+						this.$element.trigger("arcontactus.destroy");
+				}),
+				(e.prototype._initCallbackBlock = function () { }),
+				(e.prototype._initMessengersBlock = function () {
+					var e = t("<div>", { class: "messangers-block" });
+					("normal" !== this.settings.menuSize &&
+						"large" !== this.settings.menuSize) ||
+						e.addClass("lg"),
+						"small" === this.settings.menuSize && e.addClass("sm"),
+						this._appendMessengerIcons(e),
+						this.$element.append(e);
+				}),
+				(e.prototype._appendMessengerIcons = function (e) {
+					t.each(this.settings.items, function (s) {
+						if ("callback" == this.href)
+							var n = t("<div>", {
+								class: "messanger call-back " + (this.class ? this.class : ""),
+							});
+						else if (
+							((n = t("<a>", {
+								class: "messanger " + (this.class ? this.class : ""),
+								id: this.id ? this.id : null,
+								href: this.href,
+								target: this.target ? this.target : "_blank",
+							})),
+								this.onClick)
+						) {
+							var i = this;
+							n.on("click", function (t) {
+								i.onClick(t);
+							});
+						}
+						var a = t("<span>", {
+							style: this.color ? "background-color:" + this.color : null,
+						});
+						a.append(this.icon),
+							n.append(a),
+							n.append("<p>" + this.title + "</p>"),
+							e.append(n);
+					});
+				}),
+				(e.prototype._initMessageButton = function () {
+					var e = this,
+						s = t("<div>", {
+							class: "arcontactus-message-button",
+							style: this._backgroundStyle(),
+						});
+					"large" === this.settings.buttonSize && this.$element.addClass("lg"),
+						"medium" === this.settings.buttonSize && this.$element.addClass("md"),
+						"small" === this.settings.buttonSize && this.$element.addClass("sm");
+					var n = t("<div>", { class: "static" });
+					n.append(this.settings.buttonIcon);
+					// !1 !== this.settings.buttonText
+					// 	? n.append("<p>" + this.settings.buttonText + "</p>")
+					// 	: s.addClass("no-text");
+					var i = t("<div>", { class: "callback-state", style: e._colorStyle() });
+					i.append(this.settings.callbackStateIcon);
+					var a = t("<div>", { class: "icons hide" }),
+						o = t("<div>", { class: "icons-line" });
+					t.each(this.settings.items, function (s) {
+						var n = t("<span>", { style: e._colorStyle() });
+						n.append(this.icon), o.append(n);
+					}),
+						a.append(o);
+					var r = t("<div>", { class: "arcontactus-close" });
+					r.append(this.settings.closeIcon);
+					var c = t("<div>", { class: "pulsation", style: e._backgroundStyle() }),
+						l = t("<div>", { class: "pulsation", style: e._backgroundStyle() }),
+						m = t("<div>", { class: "arcu-button-content", style: e._backgroundStyle() }),
+						o = t("<div>", { class: "arcu-button-title", text: "Contact CS" });
+					m.append(o);
+					s.append(n).append(i).append(a).append(r).append(c).append(l).append(m),
+						this.$element.append(s);
+				}),
+				(e.prototype._initPrompt = function () {
+					var e = t("<div>", { class: "arcontactus-prompt" }),
+						s = t("<div>", {
+							class: "arcontactus-prompt-close",
+							style: this._colorStyle(),
+						});
+					s.append(this.settings.closeIcon);
+					var n = t("<div>", { class: "arcontactus-prompt-inner" });
+					e.append(s).append(n), this.$element.append(e);
+				}),
+				(e.prototype._initEvents = function () {
+					var e = this.$element,
+						s = this;
+					e
+						.find(".arcontactus-message-button")
+						.on("mousedown", function (t) {
+							(s.x = t.pageX), (s.y = t.pageY);
+						})
+						.on("mouseup", function (t) {
+							t.pageX === s.x &&
+								t.pageY === s.y &&
+								(s.toggleMenu(), t.preventDefault());
+						}),
+						this.settings.drag &&
+						(e.draggable(),
+							e.get(0).addEventListener(
+								"touchmove",
+								function (t) {
+									var s = t.targetTouches[0];
+									(e.get(0).style.left = s.pageX - 25 + "px"),
+										(e.get(0).style.top = s.pageY - 25 + "px"),
+										t.preventDefault();
+								},
+								!1
+							)),
+						t(document).on("click", function (t) {
+							s.closeMenu();
+						}),
+						e.on("click", function (t) {
+							t.stopPropagation();
+						}),
+						e.find(".call-back").on("click", function () {
+							s.openCallbackPopup();
+						}),
+						e.find(".callback-countdown-block-close").on("click", function () {
+							null != s.countdown &&
+								(clearInterval(s.countdown), (s.countdown = null)),
+								s.closeCallbackPopup();
+						}),
+						e.find(".arcontactus-prompt-close").on("click", function () {
+							s.hidePrompt();
+						});
+				}),
+				(e.prototype.show = function () {
+					this.$element.addClass("active"),
+						this.$element.trigger("arcontactus.show");
+				}),
+				(e.prototype.hide = function () {
+					this.$element.removeClass("active"),
+						this.$element.trigger("arcontactus.hide");
+				}),
+				(e.prototype.openMenu = function () {
+					var t = this.$element;
+					t.find(".messangers-block").hasClass("show-messageners-block") ||
+						(this.stopAnimation(),
+							t
+								.find(".messangers-block, .arcontactus-close")
+								.addClass("show-messageners-block"),
+							t.find(".icons, .static").addClass("hide"),
+							t.find(".pulsation").addClass("stop"),
+							(this._menuOpened = !0),
+							this.$element.trigger("arcontactus.openMenu"));
+				}),
+				(e.prototype.closeMenu = function () {
+					var t = this.$element;
+					t.find(".messangers-block").hasClass("show-messageners-block") &&
+						(t
+							.find(".messangers-block, .arcontactus-close")
+							.removeClass("show-messageners-block"),
+							t.find(".icons, .static").removeClass("hide"),
+							t.find(".pulsation").removeClass("stop"),
+							this.startAnimation(),
+							(this._menuOpened = !1),
+							this.$element.trigger("arcontactus.closeMenu"));
+				}),
+				(e.prototype.toggleMenu = function () {
+					var t = this.$element;
+					if (
+						(this.hidePrompt(),
+							t.find(".callback-countdown-block").hasClass("display-flex"))
+					)
+						return !1;
+					t.find(".messangers-block").hasClass("show-messageners-block")
+						? this.closeMenu()
+						: this.openMenu(),
+						this.$element.trigger("arcontactus.toggleMenu");
+				}),
+				(e.prototype.openCallbackPopup = function () {
+					var t = this.$element;
+					t.addClass("opened"),
+						this.closeMenu(),
+						this.stopAnimation(),
+						t.find(".icons, .static").addClass("hide"),
+						t.find(".pulsation").addClass("stop"),
+						t.find(".callback-countdown-block").addClass("display-flex"),
+						(this._callbackOpened = !0),
+						this.$element.trigger("arcontactus.openCallbackPopup");
+				}),
+				(e.prototype.closeCallbackPopup = function () {
+					var t = this.$element;
+					t.removeClass("opened"),
+						t.find(".messangers-block").removeClass("show-messageners-block"),
+						t.find(".arcontactus-close").removeClass("show-messageners-block"),
+						t.find(".icons, .static").removeClass("hide"),
+						this.startAnimation(),
+						(this._callbackOpened = !1),
+						this.$element.trigger("arcontactus.closeCallbackPopup");
+				}),
+				(e.prototype.startAnimation = function () {
+					var t = this.$element,
+						e = t.find(".icons-line"),
+						s = t.find(".static"),
+						n = t.find(".icons-line>span:first-child").width() + 40;
+					if ("large" === this.settings.buttonSize)
+						var i = 2,
+							a = 0;
+					"medium" === this.settings.buttonSize && ((i = 4), (a = -2)),
+						"small" === this.settings.buttonSize && ((i = 4), (a = -2));
+					var o = t.find(".icons-line>span").length,
+						r = 0;
+					if ((this.stopAnimation(), 0 === this.settings.iconsAnimationSpeed))
+						return !1;
+					this._interval = setInterval(function () {
+						0 === r && (e.parent().removeClass("hide"), s.addClass("hide"));
+						var t = "translate(" + -(n * r + i) + "px, " + a + "px)";
+						e.css({ "-webkit-transform": t, "-ms-transform": t, transform: t }),
+							++r > o &&
+							(r > o + 1 && (r = 0),
+								e.parent().addClass("hide"),
+								s.removeClass("hide"),
+								(t = "translate(" + -i + "px, " + a + "px)"),
+								e.css({
+									"-webkit-transform": t,
+									"-ms-transform": t,
+									transform: t,
+								}));
+					}, this.settings.iconsAnimationSpeed);
+				}),
+				(e.prototype.stopAnimation = function () {
+					clearInterval(this._interval);
+					var t = this.$element,
+						e = t.find(".icons-line"),
+						s = t.find(".static");
+					e.parent().addClass("hide"), s.removeClass("hide");
+					var n = "translate(-2px, 0px)";
+					e.css({ "-webkit-transform": n, "-ms-transform": n, transform: n });
+				}),
+				(e.prototype.showPrompt = function (t) {
+					var e = this.$element.find(".arcontactus-prompt");
+					t && t.content && e.find(".arcontactus-prompt-inner").html(t.content),
+						e.addClass("active"),
+						this.$element.trigger("arcontactus.showPrompt");
+				}),
+				(e.prototype.hidePrompt = function () {
+					this.$element.find(".arcontactus-prompt").removeClass("active"),
+						this.$element.trigger("arcontactus.hidePrompt");
+				}),
+				(e.prototype.showPromptTyping = function () {
+					this.$element
+						.find(".arcontactus-prompt")
+						.find(".arcontactus-prompt-inner")
+						.html(""),
+						this._insertPromptTyping(),
+						this.showPrompt({}),
+						this.$element.trigger("arcontactus.showPromptTyping");
+				}),
+				(e.prototype._insertPromptTyping = function () {
+					var e = this.$element.find(".arcontactus-prompt-inner"),
+						s = t("<div>", { class: "arcontactus-prompt-typing" }),
+						n = t("<div>");
+					s.append(n), s.append(n.clone()), s.append(n.clone()), e.append(s);
+				}),
+				(e.prototype.hidePromptTyping = function () {
+					this.$element.find(".arcontactus-prompt").removeClass("active"),
+						this.$element.trigger("arcontactus.hidePromptTyping");
+				}),
+				(e.prototype._backgroundStyle = function () {
+					return "background-color: " + this.settings.theme;
+				}),
+				(e.prototype._colorStyle = function () {
+					return "color: " + this.settings.theme;
+				}),
+				(t.fn.contactUs = function (s) {
+					var n = Array.prototype.slice.call(arguments, 1);
+					return this.each(function () {
+						var i = t(this),
+							a = i.data("ar.contactus");
+						a ||
+							((a = new e(this, "object" == typeof s && s)),
+								i.data("ar.contactus", a)),
+							"string" == typeof s && "_" !== s.charAt(0) && a[s].apply(a, n);
+					});
+				}),
+				(t.fn.contactUs.Constructor = e);
+		})(jQuery);
+
+		!(function (t) {
+			function e(s, n) {
+				(this._initialized = !1),
+					(this.settings = null),
+					(this.options = t.extend({}, e.Defaults, n)),
+					(this.$element = t(s)),
+					this.init(),
+					(this.x = 0),
+					(this.y = 0),
+					this._interval,
+					(this._menuOpened = !1),
+					(this._callbackOpened = !1),
+					(this.countdown = null);
+			}
+			(e.Defaults = {
+				align: "left",
+				countdown: 0,
+				drag: !1,
+				buttonText: "",
+				buttonSize: "large",
+				menuSize: "normal",
+				items: [],
+				iconsAnimationSpeed: 1200,
+				theme: "#F65F71",
+				buttonIcon: `<?xml version="1.0" encoding="iso-8859-1"?>
+				<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+				<svg fill="#F65F71" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M470.573,369.837c-1.951-5.285-7.815-7.988-13.1-6.038l-106.072,39.139c-5.285,1.95-7.988,7.815-6.038,13.1
+							c1.521,4.12,5.42,6.671,9.57,6.671c1.172,0,2.365-0.204,3.53-0.633l106.072-39.139
+							C469.82,380.987,472.523,375.122,470.573,369.837z"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M335.337,419.738c-1.949-5.286-7.815-7.989-13.1-6.039l-4.492,1.657c-5.284,1.95-7.988,7.815-6.038,13.099
+							c1.52,4.12,5.42,6.672,9.57,6.672c1.172,0,2.365-0.204,3.53-0.633l4.492-1.657C334.583,430.887,337.287,425.023,335.337,419.738z"
+							/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M470.573,328.276c-1.951-5.285-7.815-7.986-13.1-6.038l-83.825,30.93c-5.285,1.95-7.988,7.815-6.038,13.1
+							c1.521,4.12,5.42,6.671,9.57,6.671c1.172,0,2.365-0.204,3.53-0.633l83.825-30.93C469.82,339.426,472.523,333.561,470.573,328.276z
+							"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M470.573,287.147c-1.951-5.285-7.815-7.986-13.1-6.038l-83.825,30.93c-5.285,1.95-7.988,7.815-6.038,13.1
+							c1.521,4.12,5.42,6.671,9.57,6.671c1.172,0,2.365-0.204,3.53-0.633l83.825-30.93C469.82,298.297,472.523,292.432,470.573,287.147z
+							"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M505.332,100.528L259.531,9.832c-2.279-0.84-4.783-0.84-7.061,0L6.669,100.528l-0.002,0.008
+							c-0.805,0.298-1.579,0.692-2.299,1.193C1.631,103.637,0,106.762,0,110.097v291.806c0,4.271,2.661,8.09,6.668,9.569l245.801,90.696
+							c1.146,0.423,2.341,0.63,3.53,0.63c1.201,0,2.396-0.218,3.528-0.636l0.004,0.006l245.801-90.696
+							c4.007-1.479,6.668-5.297,6.668-9.569V110.097C512,105.825,509.339,102.007,505.332,100.528z M245.801,477.965L20.398,394.795
+							V124.732l45.896,16.936v123.578c0,4.271,2.661,8.09,6.668,9.569l110.151,40.645c1.146,0.423,2.341,0.63,3.53,0.63
+							c2.058,0,4.098-0.623,5.833-1.832c2.736-1.907,4.367-5.032,4.367-8.367V189.838l48.956,18.064V477.965z M176.446,182.311v108.943
+							l-89.753-33.118V149.193L176.446,182.311z M105.957,134.477l80.688-29.773l80.688,29.773l-80.688,29.773L105.957,134.477z
+							M256,189.922l-40.001-14.76l84.329-31.117c4.007-1.479,6.668-5.297,6.668-9.569s-2.661-8.09-6.668-9.569L190.176,84.263
+							c-2.279-0.84-4.782-0.84-7.062,0L76.383,123.647l-36.72-13.55L256,30.273l216.337,79.825L256,189.922z M491.602,394.795
+							l-225.402,83.169V207.902l225.402-83.17V394.795z"/>
+					</g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				<g>
+				</g>
+				</svg>`,
+				closeIcon: '',
+			}),
+				(e.prototype.init = function () {
+					this.destroy(),
+						(this.settings = t.extend({}, this.options)),
+						this.$element
+							.addClass("arcontactus0-widget")
+							.addClass("arcontactus0-message"),
+						"left" === this.settings.align
+							? this.$element.addClass("left")
+							: this.$element.addClass("right"),
+						this.settings.items.length
+							? (this._initCallbackBlock(),
+								this._initMessengersBlock(),
+								this._initMessageButton(),
+								this._initPrompt(),
+								this._initEvents(),
+								this.startAnimation(),
+								this.$element.addClass("active"))
+							: console.info("jquery.contactus:no items"),
+						(this._initialized = !0),
+						this.$element.trigger("arcontactus0.init");
+				}),
+				(e.prototype.destroy = function () {
+					if (!this._initialized) return !1;
+					this.$element.html(""),
+						(this._initialized = !1),
+						this.$element.trigger("arcontactus0.destroy");
+				}),
+				(e.prototype._initCallbackBlock = function () { }),
+				(e.prototype._initMessengersBlock = function () {
+					var e = t("<div>", { class: "messangers-block" });
+					("normal" !== this.settings.menuSize &&
+						"large" !== this.settings.menuSize) ||
+						e.addClass("lg"),
+						"small" === this.settings.menuSize && e.addClass("sm"),
+						this._appendMessengerIcons(e),
+						this.$element.append(e);
+				}),
+				(e.prototype._appendMessengerIcons = function (e) {
+					t.each(this.settings.items, function (s) {
+						if ("callback" == this.href)
+							var n = t("<div>", {
+								class: "messanger call-back " + (this.class ? this.class : ""),
+							});
+						else if (
+							((n = t("<a>", {
+								class: "messanger " + (this.class ? this.class : ""),
+								id: this.id ? this.id : null,
+								href: this.href,
+								target: this.target ? this.target : "_blank",
+							})),
+								this.onClick)
+						) {
+							var i = this;
+							n.on("click", function (t) {
+								i.onClick(t);
+							});
+						}
+						var a = t("<span>", {
+							style: this.color ? "background-color:" + this.color : null,
+						});
+						a.append(this.icon),
+							n.append(a),
+							n.append("<p>" + this.title + "</p>"),
+							e.append(n);
+					});
+				}),
+				(e.prototype._initMessageButton = function () {
+					var e = this,
+						s = t("<div>", {
+							class: "arcontactus0-message-button",
+							style: this._backgroundStyle(),
+							href: `https://planbphilippines.ph/proof-of-deliveries`,
+						});
+					"large" === this.settings.buttonSize && this.$element.addClass("lg"),
+						"medium" === this.settings.buttonSize && this.$element.addClass("md"),
+						"small" === this.settings.buttonSize && this.$element.addClass("sm");
+					var n = t("<div>", { class: "static" });
+					n.append(this.settings.buttonIcon);
+					// !1 !== this.settings.buttonText
+					// 	? n.append("<p>" + this.settings.buttonText + "</p>")
+					// 	: s.addClass("no-text");
+					var i = t("<div>", { class: "callback-state", style: e._colorStyle() });
+					i.append(this.settings.callbackStateIcon);
+					var a = t("<div>", { class: "icons hide" }),
+						o = t("<div>", { class: "icons-line" });
+					t.each(this.settings.items, function (s) {
+						var n = t("<span>", { style: e._colorStyle() });
+						n.append(this.icon), o.append(n);
+					}),
+						a.append(o);
+					var r = t("<div>", { class: "arcontactus0-close" });
+					r.append(this.settings.closeIcon);
+					var c = t("<div>", { class: "pulsation", style: e._backgroundStyle() }),
+						l = t("<div>", { class: "pulsation", style: e._backgroundStyle() }),
+						m = t("<div>", { class: "arcu-button-content", style: e._backgroundStyle() }),
+						o = t("<div>", { class: "arcu-button-title", text: "Proofs" });
+					m.append(o);
+					s.append(n).append(i).append(a).append(r).append(c).append(l).append(m),
+						this.$element.append(s);
+				}),
+				(e.prototype._initPrompt = function () {
+					var e = t("<div>", { class: "arcontactus0-prompt" }),
+						s = t("<div>", {
+							class: "arcontactus0-prompt-close",
+							style: this._colorStyle(),
+						});
+					s.append(this.settings.closeIcon);
+					var n = t("<div>", { class: "arcontactus0-prompt-inner" });
+					e.append(s).append(n), this.$element.append(e);
+				}),
+				(e.prototype._initEvents = function () {
+					var e = this.$element;
+					e.on("click", function (t) {
+						window.location.href = `https://planbphilippines.ph/proof-of-deliveries`;
+					})
+				}),
+				(e.prototype.startAnimation = function () {
+					var t = this.$element,
+						e = t.find(".icons-line"),
+						s = t.find(".static"),
+						n = t.find(".icons-line>span:first-child").width() + 40;
+					if ("large" === this.settings.buttonSize)
+						var i = 2,
+							a = 0;
+					"medium" === this.settings.buttonSize && ((i = 4), (a = -2)),
+						"small" === this.settings.buttonSize && ((i = 4), (a = -2));
+					var o = t.find(".icons-line>span").length,
+						r = 0;
+					if ((this.stopAnimation(), 0 === this.settings.iconsAnimationSpeed))
+						return !1;
+					this._interval = setInterval(function () {
+						0 === r && (e.parent().removeClass("hide"), s.addClass("hide"));
+						var t = "translate(" + -(n * r + i) + "px, " + a + "px)";
+						e.css({ "-webkit-transform": t, "-ms-transform": t, transform: t }),
+							++r > o &&
+							(r > o + 1 && (r = 0),
+								e.parent().addClass("hide"),
+								s.removeClass("hide"),
+								(t = "translate(" + -i + "px, " + a + "px)"),
+								e.css({
+									"-webkit-transform": t,
+									"-ms-transform": t,
+									transform: t,
+								}));
+					}, this.settings.iconsAnimationSpeed);
+				}),
+				(e.prototype.stopAnimation = function () {
+					clearInterval(this._interval);
+					var t = this.$element,
+						e = t.find(".icons-line"),
+						s = t.find(".static");
+					e.parent().addClass("hide"), s.removeClass("hide");
+					var n = "translate(-2px, 0px)";
+					e.css({ "-webkit-transform": n, "-ms-transform": n, transform: n });
+				}),
+				(e.prototype._backgroundStyle = function () {
+					return "background-color: " + this.settings.theme;
+				}),
+				(e.prototype._colorStyle = function () {
+					return "color: " + this.settings.theme;
+				}),
+				(t.fn.contactUs0 = function (s) {
+					var n = Array.prototype.slice.call(arguments, 1);
+					return this.each(function () {
+						var i = t(this),
+							a = i.data("ar.contactus");
+						a ||
+							((a = new e(this, "object" == typeof s && s)),
+								i.data("ar.contactus", a)),
+							"string" == typeof s && "_" !== s.charAt(0) && a[s].apply(a, n);
+					});
+				}),
+				(t.fn.contactUs0.Constructor = e);
+		})(jQuery);
+
+	</script>
+
+
+	<script>
+		var arCuMessages = [""];
+		var arCuLoop = false;
+		var arCuCloseLastMessage = false;
+		var arCuPromptClosed = false;
+		var _arCuTimeOut = null;
+		var arCuDelayFirst = 2000;
+		var arCuTypingTime = 2000;
+		var arCuMessageTime = 4000;
+		var arCuClosedCookie = 0;
+		var arcItems = [];
+		window.addEventListener('load', function () {
+			jQuery('#arcontactus').on('arcontactus.openMenu', function () {
+				clearTimeout(_arCuTimeOut);
+				arCuPromptClosed = true;
+				jQuery('#contact').contactUs('hidePrompt');
+				arCuCreateCookie('arcu-closed', 1, 30);
+			});
+			jQuery('#arcontactus').on('arcontactus.hidePrompt', function () {
+				clearTimeout(_arCuTimeOut);
+				arCuPromptClosed = true;
+				arCuCreateCookie('arcu-closed', 1, 30);
+			});
+
+			var arcItem = {};
+			arcItem.id = 'msg-item-1';
+			arcItem.class = 'msg-item-facebook-messenger';
+			arcItem.title = 'Via Facebook Messenger';
+			arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z"></path></svg>';
+			arcItem.href = 'https://m.me/planbmanila.official/';
+			arcItem.color = '#567AFF';
+			arcItems.push(arcItem);
+			var arcItem = {};
+			arcItem.id = 'msg-item-2';
+			arcItem.class = 'msg-item-zalo';
+			arcItem.title = 'Via Telegram';
+			arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path> </svg>';
+			arcItem.href = 'https://t.me/+639690131900';
+			arcItem.color = '#2EA8FF';
+			arcItems.push(arcItem);
+
+			jQuery('#arcontactus').contactUs({
+				items: arcItems
+			});
+		});
+	</script>
+	<script>
+		var arCuMessages = [""];
+		var arCuLoop = false;
+		var arCuCloseLastMessage = false;
+		var arCuPromptClosed = false;
+		var _arCuTimeOut = null;
+		var arCuDelayFirst = 2000;
+		var arCuTypingTime = 2000;
+		var arCuMessageTime = 4000;
+		var arCuClosedCookie = 0;
+		var arcItems0 = [];
+		window.addEventListener('load', function () {
+			jQuery('#arcontactus0').on('arcontactus.openMenu', function () {
+				clearTimeout(_arCuTimeOut);
+				arCuPromptClosed = true;
+				jQuery('#contact').contactUs0('hidePrompt');
+				arCuCreateCookie('arcu-closed', 1, 30);
+			});
+			jQuery('#arcontactus0').on('arcontactus.hidePrompt', function () {
+				clearTimeout(_arCuTimeOut);
+				arCuPromptClosed = true;
+				arCuCreateCookie('arcu-closed', 1, 30);
+			});
+
+			var arcItem0 = {};
+			arcItem0.id = 'msg-item-2';
+			arcItem0.class = 'msg-item-zalo';
+			arcItem0.title = 'Via Telegram';
+			arcItem0.icon = `<?xml version="1.0" encoding="iso-8859-1"?>
+			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+			<svg fill="#F65F71" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+				viewBox="0 0 456.482 456.482" xml:space="preserve">
+			<g>
+				<path d="M96.582,228.085c-43.026,0-78.03,35.004-78.03,78.029c0,43.023,35.004,78.025,78.03,78.025h0.002
+					c43.024,0,78.027-35.002,78.027-78.025C174.611,263.089,139.607,228.085,96.582,228.085z M96.584,370.14h-0.002
+					c-35.306,0-64.03-28.722-64.03-64.025c0-35.306,28.724-64.029,64.03-64.029c35.306,0,64.029,28.724,64.029,64.029
+					C160.611,341.418,131.889,370.14,96.584,370.14z"/>
+				<path d="M96.58,281.802c-13.406,0-24.313,10.907-24.313,24.314c0,13.402,10.907,24.307,24.313,24.307
+					c13.406,0,24.313-10.904,24.313-24.307C120.893,292.709,109.986,281.802,96.58,281.802z"/>
+				<path d="M378.453,228.085c-9.499,0-18.604,1.711-27.03,4.833l-23.453-50.632c3.429,2.024,7.422,3.191,11.684,3.191
+					c3.866,0,7-3.134,7-7V146.35c0-3.866-3.134-7-7-7c-11.371,0-20.839,8.273-22.719,19.114l-16.609-35.857
+					c-1.147-2.474-3.625-4.058-6.352-4.058h-20.88c-3.866,0-7,3.134-7,7s3.134,7,7,7h16.408l10.1,21.804
+					c-0.296,0.329-0.566,0.688-0.803,1.082l-67.106,111.859h-8.423c-2.661,0-4.826-2.165-4.826-4.825v-49.828
+					c0-20.756-16.886-37.643-37.641-37.643h-54.111V79.343c0-3.866-3.134-7-7-7H7c-3.866,0-7,3.134-7,7v128.843c0,3.866,3.134,7,7,7
+					h37.324c-15.788,9.073-29.238,22.222-38.63,38.459c-1.936,3.347-0.792,7.628,2.554,9.564c3.345,1.935,7.628,0.793,9.564-2.555
+					c16.224-28.046,46.407-45.469,78.77-45.469c50.139,0,90.93,40.791,90.93,90.931c0,3.866,3.134,7,7,7h72.557
+					c2.464,0,4.746-1.295,6.009-3.41l55.475-92.854l10.238,22.104c-22.943,13.602-38.367,38.607-38.367,67.159
+					c0,43.023,35.004,78.025,78.03,78.025h0.002c43.024,0,78.027-35.002,78.027-78.025
+					C456.482,263.089,421.479,228.085,378.453,228.085z M14,174.999v-58.703h98.692v58.703H93.88H14z M112.692,86.343v15.953H14V86.343
+					H112.692z M320.62,202.833l-57.523,96.283h-61.824c-3.615-54.607-49.185-97.931-104.69-97.931c-0.853,0-82.582,0-82.582,0v-12.187
+					h166.804c13.036,0,23.641,10.607,23.641,23.643v49.828c0,10.38,8.445,18.825,18.826,18.825h12.387c2.459,0,4.737-1.29,6.003-3.399
+					l64.988-108.33l14.861,32.084C321.18,202.006,320.879,202.399,320.62,202.833z M378.455,370.14h-0.002
+					c-35.307,0-64.03-28.722-64.03-64.025c0-22.929,12.121-43.07,30.286-54.383l17.025,36.756c-4.672,4.434-7.595,10.693-7.595,17.628
+					c0,13.402,10.906,24.307,24.313,24.307c13.405,0,24.312-10.904,24.312-24.307c0-13.406-10.906-24.314-24.312-24.314
+					c-1.438,0-2.844,0.133-4.213,0.373l-16.904-36.494c6.616-2.319,13.72-3.596,21.118-3.596c35.306,0,64.029,28.724,64.029,64.029
+					C442.482,341.418,413.76,370.14,378.455,370.14z"/>
+			</g>
+			</svg>`;
+			arcItem0.color = '#2EA8FF';
+			arcItems0.push(arcItem0);
+
+			jQuery('#arcontactus0').contactUs0({
+				items: arcItems0
+			});
+		});
+	</script>
+</body>
+
+</html>
